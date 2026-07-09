@@ -1,0 +1,82 @@
+/* Reset định dạng mặc định của trình duyệt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* THIẾT KẾ NAVBAR VỚI SPACE-BETWEEN */
+.navbar {
+    background-color: #ffffff;
+    height: 70px;
+    padding: 0 50px; /* Tạo khoảng trống 2 bên lề trái phải của navbar */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    
+    /* Bật Flexbox để dàn 3 phần tử (Logo, Links, Auth) thành hàng ngang */
+    display: flex;
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    
+    /* SPACE-BETWEEN: Đẩy 3 khối con ra xa nhau nhất có thể. 
+       Logo sẽ sát bên trái, Button sát bên phải, Menu nằm ở giữa */
+    justify-content: space-between; 
+}
+
+/* 1. LOGO STYLE */
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none; /* Xóa bỏ đường gạch chân mặc định của thẻ a */
+}
+
+.logo a span {
+    color: #007bff; /* Nhấn màu xanh cho chữ Dev */
+}
+
+/* 2. MENU STYLE (ul và li) */
+.nav-links {
+    display: flex;
+    list-style: none; /* Xóa dấu chấm tròn mặc định của thẻ ul-li */
+    gap: 30px; /* Tạo khoảng cách đều 30px giữa các chữ menu */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+/* Hiệu ứng khi di chuột vào link menu */
+.nav-links a:hover, 
+.nav-links a.active {
+    color: #007bff; /* Đổi chữ sang màu xanh */
+}
+
+/* 3. BUTTON STYLE */
+.btn-login {
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px; /* Tạo nút bo tròn thon gọn */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-login:hover {
+    background-color: #0056b3;
+}
+
+/* Nội dung giả bên dưới */
+.content {
+    text-align: center;
+    padding: 100px 20px;
+}
