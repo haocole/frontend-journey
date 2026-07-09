@@ -1,0 +1,85 @@
+body {
+    background-color: #eef2f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-card {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 16px; /* Bo tròn các góc của hộp mạnh hơn bài trước */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* AVATAR & BORDER-RADIUS: Bí kíp biến ảnh vuông thành ảnh tròn xoe */
+.avatar {
+    width: 100px;
+    height: 100px;
+    /* BORDER-RADIUS: Khi chỉnh 50% cho một khối hình vuông, nó sẽ biến thành hình tròn */
+    border-radius: 50%; 
+    object-fit: cover; /* Giúp ảnh không bị méo khi co giãn */
+    border: 3px solid #007bff; /* Thêm một đường viền xanh cho avatar nổi bật */
+    margin-bottom: 15px;
+}
+
+.name {
+    margin: 10px 0 5px 0;
+    color: #333;
+    font-size: 22px;
+}
+
+.job {
+    margin: 0 0 25px 0;
+    color: #777;
+    font-size: 14px;
+    text-transform: uppercase; /* Tự động viết hoa toàn bộ chữ */
+    letter-spacing: 1px; /* Giãn khoảng cách giữa các chữ cái */
+}
+
+/* HAI BUTTON & GAP trong Flexbox */
+.button-group {
+    display: flex; /* Bật flex để 2 button tự động nằm chung một hàng ngang */
+    
+    /* GAP: Tự động tạo khoảng cách 12px CHỈ Ở GIỮA các phần tử con, 
+       không cần phải căn margin-right hay margin-left thủ công thô sơ nữa */
+    gap: 12px; 
+}
+
+.btn {
+    flex: 1; /* Giúp 2 button tự chia đều không gian bằng nhau 50% - 50% */
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s; /* Tạo hiệu ứng đổi màu mượt mà hơn khi hover */
+}
+
+/* Nút Follow màu xanh dương */
+.btn-follow {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.btn-follow:hover {
+    background-color: #0056b3;
+}
+
+/* Nút Message màu trắng, viền xám */
+.btn-message {
+    background-color: transparent;
+    color: #555;
+    border: 1px solid #ccc;
+}
+
+.btn-message:hover {
+    background-color: #f0f0f0;
+    border-color: #999;
+}
