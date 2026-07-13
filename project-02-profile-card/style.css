@@ -83,3 +83,36 @@ body {
     background-color: #f0f0f0;
     border-color: #999;
 }
+/* Thiết kế khối thống kê */
+.stats-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0; /* Tạo một đường kẻ ngang mảnh bên trên */
+}
+
+.stats-item {
+    display: flex;
+    flex-direction: column; /* Xếp số ở trên, chữ ở dưới */
+}
+
+.stats-item strong {
+    font-size: 18px;
+    color: #333;
+}
+
+.stats-item span {
+    font-size: 12px;
+    color: #999;
+    margin-top: 4px;
+}
+
+/* Hiệu ứng zoom nhẹ toàn bộ thẻ khi di chuột vào (Tùy chọn giúp thẻ sinh động hơn) */
+.profile-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile-card:hover {
+    transform: translateY(-5px); /* Nhấc nhẹ thẻ lên */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Đổ bóng đậm hơn */
+}
