@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H.Cole Shop - Thương Mại Điện Tử</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- THANH NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">H.Cole<span>Shop</span></div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+        </div>
+        <div class="cart-icon" id="openCartBtn">
+            🛒 Giỏ hàng (<span id="cartCount">0</span>)
+        </div>
+    </nav>
+
+    <!-- BỐ CỤC CHÍNH -->
+    <div class="shop-container">
+        <!-- Thanh bộ lọc bên cạnh (Sidebar) -->
+        <aside class="sidebar">
+            <h3>Danh Mục</h3>
+            <ul class="category-list">
+                <li><button class="btn-category active" data-category="all">Tất Cả</button></li>
+                <li><button class="btn-category" data-category="phone">Điện thoại</button></li>
+                <li><button class="btn-category" data-category="laptop">Laptop</button></li>
+                <li><button class="btn-category" data-category="accessory">Phụ kiện</button></li>
+            </ul>
+        </aside>
+
+        <!-- Lưới hiển thị sản phẩm -->
+        <main class="products-grid" id="productsContainer">
+            <!-- Sản phẩm sẽ được tự động đổ vào đây bằng JavaScript -->
+        </main>
+    </div>
+
+    <!-- MODAL GIỎ HÀNG (ẨN/HIỆN KHI BẤM) -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <span class="close-btn" id="closeCartBtn">&times;</span>
+            <h2>Giỏ Hàng Của Bạn</h2>
+            <div id="cartItemsContainer">
+                <!-- Các món đồ đã mua hiện ở đây -->
+                <p style="color: #888;">Giỏ hàng trống</p>
+            </div>
+            <div class="cart-summary">
+                <h3>Tổng tiền: <span id="cartTotal">0</span>đ</h3>
+                <button class="btn-checkout">Thanh Toán Ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
