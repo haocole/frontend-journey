@@ -1,4 +1,5 @@
-/* Căn giữa form ra giữa màn hình */
+/* ... Giữ nguyên các phần thiết kế body và login-card cũ của bạn ... */
+
 body {
     background-color: #f4f4f9;
     display: flex;
@@ -9,21 +10,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Thiết kế chiếc hộp bọc ngoài form */
 .login-card {
     background-color: #ffffff;
-    width: 320px;
-    
-    /* PADDING: Tạo khoảng cách trống từ chữ/nội dung co vào bên trong */
+    width: 340px;
     padding: 30px; 
-    
-    /* BORDER: Tạo đường viền xung quanh hộp (Độ dày - Kiểu viền - Màu sắc) */
     border: 1px solid #e0e0e0; 
-    
-    /* Bo tròn các góc của hộp cho mềm mại */
     border-radius: 8px;
-    
-    /* Tạo bóng đổ nhẹ cho hộp trông xịn hơn */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -34,36 +26,69 @@ body {
     color: #333;
 }
 
-/* Thiết kế cho các ô INPUT */
-input {
-    width: 100%;
-    /* PADDING: Giúp không gian bên trong ô nhập rộng rãi, dễ gõ chữ hơn */
-    padding: 12px; 
-    margin-bottom: 15px;
-    
-    /* BORDER: Thay đổi đường viền mặc định của trình duyệt thành viền mỏng màu xám */
-    border: 1px solid #ccc; 
-    border-radius: 4px;
-    
-    /* Giúp kích thước ô input không bị tràn ra ngoài khi cộng thêm padding */
-    box-sizing: border-box; 
+/* NÂNG CẤP: Quản lý khoảng cách các ô nhập */
+.input-group {
+    position: relative;
+    margin-bottom: 20px; /* Tạo khoảng trống đủ cho chữ báo lỗi */
 }
 
-/* Thiết kế cho BUTTON */
-button {
+input {
+    width: 100%;
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-sizing: border-box; 
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà khi click */
+}
+
+/* Hiệu ứng khi click vào ô nhập (Focus) */
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+/* NÂNG CẤP: Nút ẩn/hiện mật khẩu nằm bên phải ô input */
+.password-group {
+    position: relative;
+}
+
+.toggle-btn {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    width: auto; /* Tránh bị dính width 100% của nút submit */
+}
+
+/* NÂNG CẤP: Chữ báo lỗi màu đỏ nằm ngay dưới input */
+.error-message {
+    color: #dc3545;
+    font-size: 12px;
+    position: absolute;
+    bottom: -18px;
+    left: 2px;
+    display: none; /* Mặc định ẩn đi, khi nào lỗi mới hiện */
+}
+
+/* Nút đăng nhập */
+.btn-submit {
     width: 100%;
     padding: 12px;
     background-color: #007bff;
     color: white;
-    
-    /* BORDER: none giúp xóa bỏ đường viền đen thô kệch mặc định của button */
-    border: none; 
+    border: none;
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-/* Hiệu ứng khi di chuột vào nút Đăng nhập */
-button:hover {
+.btn-submit:hover {
     background-color: #0056b3;
 }

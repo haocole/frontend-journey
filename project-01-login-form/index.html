@@ -3,24 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 01 - Login Form</title>
-    <!-- Liên kết với file CSS -->
+    <title>Project 01 - Login Form Nâng Cấp</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="login-card">
         <h2>Đăng Nhập</h2>
-        <form>
-            <!-- Thẻ input để nhập Email -->
-            <input type="email" placeholder="Nhập email của bạn" required>
+        <form id="loginForm">
+            <!-- Ô nhập Email -->
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Nhập email của bạn">
+                <span class="error-message" id="emailError"></span>
+            </div>
             
-            <!-- Thẻ input để nhập Mật khẩu -->
-            <input type="password" placeholder="Nhập mật khẩu" required>
+            <!-- Ô nhập Mật khẩu -->
+            <div class="input-group password-group">
+                <input type="password" id="password" placeholder="Nhập mật khẩu">
+                <!-- Biểu tượng nút bấm ẩn hiện mật khẩu -->
+                <button type="button" id="togglePassword" class="toggle-btn">👁️</button>
+                <span class="error-message" id="passwordError"></span>
+            </div>
             
-            <!-- Thẻ button để bấm Đăng nhập -->
-            <button type="submit">Đăng Nhập</button>
+            <button type="submit" class="btn-submit">Đăng Nhập</button>
         </form>
     </div>
+
+    <!-- Gọi file script.js nằm chung thư mục -->
     <script src="script.js"></script>
 </body>
 </html>
